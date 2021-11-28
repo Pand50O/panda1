@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--   LINK CSS AND JAVASCRIPTS ตรงนี้นะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะะ          -->
+    <!-- <script src="firebase.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+    <!--                                      -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="index2.js"></script>
+    <script src="firebase.js"></script>
+
+    <title>FirebaseNew</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.5.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.5.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  </head>
+  
+<body>
+  <div id="login_div" class="main-div">
+      <h2>Firebase Web login Example</h2>
+      <input type="email" placeholder="Email..." id="email_field"/>
+      <input type="password" placeholder="Password..." id="password_field"/>
+      
+      <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+      <h3>Welcome User</h3>
+      <p>Welcome to Firebase web login Example. You're currently logged in.</p>
+      <button>Logout</button>
+  </div>
+
+
+<script >
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCGmzsQhbDhih4mchg4bZ--XIgoUVil-L8",
+  authDomain: "fir-new-1c02e.firebaseapp.com",
+  databaseURL: "https://fir-new-1c02e-default-rtdb.firebaseio.com",
+  projectId: "fir-new-1c02e",
+  storageBucket: "fir-new-1c02e.appspot.com",
+  messagingSenderId: "443312480447",
+  appId: "1:443312480447:web:208711501d8a77e52de60a",
+  measurementId: "G-D8F8ET1S7T"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
+
+</body>
+
+</html>
